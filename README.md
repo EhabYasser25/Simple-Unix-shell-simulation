@@ -1,21 +1,82 @@
-This program is a simple shell that allows users to enter and execute commands. It supports both built-in and external commands. Global variables used include str, args, argsCount, and statusPtr. The str stores the user's input, args stores the parsed input arguments, argsCount keeps track of the number of arguments, and statusPtr is used to store the status of the child process.
+<h1 style="color:blue">Unix Shell Simulator</h1>
 
-The main functions of the program are:
+## Project Description
 
-onChildExit function: called when a child process exits, it logs the termination process to a file called "log.txt".
-log function: called by onChildExit to write the log message to the file.
-setupEnvironment function: sets up the current working directory of the shell.
-shell function: the main loop of the program that reads input from the user, parses it, evaluates it, and executes it.
-executeCommand function: executes the external commands.
-executeBuiltIn function: executes the built-in commands.
-cdCommand function: contains the implementation of the cd command with its different cases.
-echoCommand function: contains the implementation of the echo command.
-exportCommand function: contains the implementation of the export command and deals with the double quotes for getting a string with in-between spaces then storing the variables and their values in the environment.
-Secondary functions of the program are:
+* This is a Unix shell simulator written in C.
+* It supports many types of commands, including `cd`, `export`, `echo`, `ls`, and more. It also supports commands with arguments, such as `cp`, `ls -l -h`, and more.
 
-getInput function: gets the input from the user.
-parseInput function: parses the user's input into arguments.
-evaluateArgs function: evaluates each argument and replaces any environment variable references with their values.
-getType function: determines the type of input whether it is a built-in command, an external command, or exit command.
-closeFile function: prints a line in the logging file when exiting the shell to separate between different runs in the same logging file.
-The main function registers a signal handler for child processes using the signal function and then calls the setupEnvironment and shell functions.
+## How to Use
+
+#### To use this project, you'll need to follow these steps:
+
+1. Clone this repository onto your local machine.
+2. Navigate to the project directory in your terminal.
+3. Compile the code using the command make.
+4. Run the executable using the command `./shell`.
+
+#### Note: This project was developed and tested on a Unix-based system (Ubuntu 20.04 LTS). It may not work on other operating systems.
+
+
+## Supported Commands
+
+#### This shell simulator supports the following commands:
+
+* cd : Change the current working directory.
+* export : Set environment variables.
+* echo : Print text to the terminal.
+* ls : List files and directories.
+* cp : Copy files and directories.
+* mkdir : Create new directories.
+* rm : Remove files and directories.
+* cat : Display the contents of a file.
+* pwd : Print the current working directory.
+* exit : Exit the shell.
+
+#### It also supports command arguments and options, such as ls -l -h.
+
+
+## Examples
+
+#### Here are some examples of how to use this shell simulator:
+
+* Change the current working directory:
+```bash
+cd /home/user/Desktop
+```
+
+* List files and directories in the current directory:
+```bash
+ls
+```
+* Copy a file from one directory to another:
+```bash
+cp /home/user/Documents/file.txt /home/user/Desktop/
+```
+
+* Display the contents of a file:
+```bash
+cat /home/user/Documents/file.txt
+```
+
+
+## Contributing
+#### If you'd like to contribute to this project, please follow these steps:
+
+1. Fork this repository.
+2. Create a new branch with your changes.
+3. Submit a pull request.
+
+
+## License
+
+###### This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
+
+## Contact
+
+###### If you have any questions or feedback, please feel free to contact me at eng.ehabyasser@gmail.com.
+
+
+## Acknowledgments
+
+###### Thanks for your time. I hope you liked the project:relaxed:
