@@ -1,4 +1,4 @@
-<h1 style="color:blue">Unix Shell Simulator</h1>
+<h1 style="color:red">Unix Shell Simulator</h1>
 
 ## Project Description
 
