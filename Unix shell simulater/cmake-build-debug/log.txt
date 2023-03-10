@@ -1,0 +1,4 @@
+Child process with id 9414 terminated
+====================================================================================================
+Child process with id 4 terminated
+Child process with id 10630 terminated
